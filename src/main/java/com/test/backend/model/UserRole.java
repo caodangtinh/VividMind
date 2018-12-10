@@ -6,37 +6,37 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class UserRole {
-	@Id
-	private int id;
+    @Id
+    private int id;
 
-	@ManyToOne
-	private User user;
-	
-	@ManyToOne
-	private Role role;
+    @ManyToOne
+    private User user;
 
-	public int getId() {
-		return id;
-	}
+    @ManyToOne
+    private Role role;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public User getUser() {
-		return user;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setUser(User user) {
-		this.user = user;
-	}
+    public User getUser() {
+        return user;
+    }
 
-	public Role getRole() {
-		return role;
-	}
+    public void setUser(User user) {
+        this.user = user;
+    }
 
-	public void setRole(Role role) {
-		this.role = role;
-	}
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 }
 

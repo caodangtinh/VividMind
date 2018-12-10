@@ -1,46 +1,41 @@
 package com.test.backend.model;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-
 @Entity
 public class Role {
-	@Id
-	private int id;
-	
-	private String roleName;
-	
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="ROLE_ID")
-	private List<UserRole> userRoles = new ArrayList<UserRole>();
+    @Id
+    private int id;
 
-	public List<UserRole> getUserRoles() {
-		return userRoles;
-	}
+    private String roleName;
 
-	public void setUserRoles(List<UserRole> userRoles) {
-		this.userRoles = userRoles;
-	}
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "ROLE_ID")
+    private List<UserRole> userRoles = new ArrayList<>();
 
-	public int getId() {
-		return id;
-	}
+    public List<UserRole> getUserRoles() {
+        return userRoles;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public void setUserRoles(List<UserRole> userRoles) {
+        this.userRoles = userRoles;
+    }
 
-	public String getRoleName() {
-		return roleName;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setRoleName(String roleName) {
-		this.roleName = roleName;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
 }

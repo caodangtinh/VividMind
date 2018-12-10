@@ -1,14 +1,13 @@
 package com.test.backend.repository;
 
-import java.util.List;
-
+import com.test.backend.model.UserRole;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.test.backend.model.UserRole;
+import java.util.List;
 
 @Repository
-public interface UserRoleRepository extends JpaRepository<UserRole, Integer>{
-	public List<UserRole> findByUserUserName(String userName);
+public interface UserRoleRepository extends JpaRepository<UserRole, Integer> {
+    List<UserRole> findByUserUserName(String userName);
 
 }
